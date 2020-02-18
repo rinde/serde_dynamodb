@@ -43,13 +43,13 @@ fn main() {
         ..Default::default()
     };
 
-    let _my_tasks: Vec<Task> = client
-        .query(task_query_input.to_query_input(String::from("tableName")))
-        .sync()
-        .unwrap()
-        .items
-        .unwrap_or_else(|| vec![])
-        .into_iter()
-        .map(|item| serde_dynamodb::from_hashmap(item).unwrap())
-        .collect();
+//    let _my_tasks: Vec<Task> = client
+//        .query(task_query_input.to_query_input(String::from("tableName")))
+//        .sync()
+//        .unwrap()
+//        .items
+//        .unwrap_or_else(|| vec![])
+//        .into_iter()
+//        .map(|item| serde_dynamodb::from_hashmap(item).unwrap())
+//        .collect();
 }
